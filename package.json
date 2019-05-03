@@ -9,6 +9,7 @@
     "cli",
     "social"
   ],
+  "type": "module",
   "repository": "https://github.com/evanplaice/fizith/",
   "main": "src/fizith.js",
   "bin": "bin/fizith",

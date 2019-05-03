@@ -1,0 +1,21 @@
+{
+  "name": "fizith",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Evan Plaice <evanplaice@gmail.com> (http://evanplaice.com/)",
+  "description": "A CLI for scrubbing your Twitter history",
+  "keywords": [
+    "twitter",
+    "cli",
+    "social"
+  ],
+  "repository": "https://github.com/evanplaice/fizith/",
+  "main": "src/fizith.js",
+  "bin": "bin/fizith",
+  "engines": {
+    "node": ">=12.0"
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+} 

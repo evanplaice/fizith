@@ -16,7 +16,9 @@
   "engines": {
     "node": ">=12.0"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "node --experimental-modules src/fizith.js"
+  },
   "dependencies": {
     "commander": "^2.20.0",
     "dotenv": "^8.0.0",

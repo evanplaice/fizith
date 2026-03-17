@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
-const program = require('commander');
+import program from 'commander';
+import * as Fizith from '../src/fizith.js';
 
 program.version('1.0.0-alpha0', '-v, --version')
+
 program.command('search <user>')
   .alias('s')
   .description('Search for tweets by <user> with the provided options')
@@ -12,12 +14,14 @@ program.command('search <user>')
   .option('-r, --retweets [value]', 'Filter for tweets with fewer than this many retweets') 
   .action((user, options) => {
     console.log('Search');
-    console.log(user);
-    console.log(options.start);
-    console.log(options.end);
-    console.log(options.likes);
-    console.log(options.retweets);
+    // console.log(user);
+    // console.log(options.start);
+    // console.log(options.end);
+    // console.log(options.likes);
+    // console.log(options.retweets);
+    Fizith.Search(user, options);
   });
+
 program.command('run <user>')
   .alias('r')
   .description('Curate tweets by <user> with the provided options')

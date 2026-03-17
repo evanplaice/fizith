@@ -1,5 +1,5 @@
 {
-  "name": "fizith",
+  "name": "@vanillaes/fizith",
   "version": "0.0.0",
   "license": "MIT",
   "author": "Evan Plaice <evanplaice@gmail.com> (http://evanplaice.com/)",
@@ -10,7 +10,7 @@
     "social"
   ],
   "type": "module",
-  "repository": "https://github.com/evanplaice/fizith/",
+  "repository": "https://github.com/vanillaes/fizith/",
   "main": "src/fizith.js",
   "bin": "bin/fizith",
   "engines": {
@@ -22,6 +22,7 @@
   "dependencies": {
     "commander": "^2.20.0",
     "dotenv": "^8.0.0",
+    "twit": "^2.2.11",
     "twitter": "^1.7.1"
   },
   "devDependencies": {}

@@ -1,7 +1,4 @@
-import dotenv from 'dotenv';
-import twitter from 'twit';
-
-const data = {
+{
   statuses: [
     {
       created_at: 'Thu May 02 15:43:52 +0000 2019',
@@ -202,7 +199,7 @@ const data = {
       contributors: null,
       is_quote_status: false,
       retweet_count: 0,
-      favorite_count: 5,
+      favorite_count: 1,
       favorited: false,
       retweeted: false,
       lang: 'en'
@@ -362,49 +359,4 @@ const data = {
     since_id: 0,
     since_id_str: '0'
   }
-};
-
-dotenv.config();
-const client = new twitter({
-  consumer_key: process.env.CONSUMER_KEY,
-  consumer_secret: process.env.CONSUMER_SECRET,
-  access_token: process.env.ACCESS_TOKEN_KEY,
-  access_token_secret: process.env.ACCESS_TOKEN_SECRET
-});
-
-export function Search(user, options) {
-  // console.log(process.env);
-//   client.get('search/tweets', {q: `from:${user} since:2019-05-01 until:2019-05-03`}, function(error, data, response) {
-//     console.log(data);
-//  });
-  const status = data.statuses;
-  filterTweets(status, options);
-};
-
-function filterTweets(tweets, options) {
-  // console.log(options.likes);
-  // console.log(options.retweets);
-  switch(true) {
-    case options.likes !== undefined && options.retweets !== undefined:
-      tweets = tweets.filter((tweet) => (!(tweet.favorite_count < options.likes) || !(tweet.retweet_count < options.retweets)));
-      break;
-    case options.likes !== undefined:
-      tweets = tweets.filter((tweet) => !(tweet.favorite_count < options.likes));
-      break;
-    case options.retweets !== undefined:
-      tweets = tweets.filter((tweet) => !(tweet.retweet_count < options.retweets));
-      break;
-  }
-
-  console.log(tweets);
 }
-
-export function Run(user, options) {
-  return;
-}
-
-function deleteTweet() {
-  return;
-}
-
-
